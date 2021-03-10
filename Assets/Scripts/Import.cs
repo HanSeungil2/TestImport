@@ -21,7 +21,7 @@ public class Import : MonoBehaviour
 
             // 파일 이동/회전
             transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-            transform.position = new Vector3(0, 0, 30);
+            transform.position = new Vector3(0, 0, 10);
 
         }
     }
