@@ -92,7 +92,7 @@ namespace TriLibEditor
                     }
                     targetOS = "Windows";
                 }
-                else if (assetDirectory.StartsWith(string.Format("{0}/Linux", pluginsBasePath), StringComparison.InvariantCultureIgnoreCase))
+                /*else if (assetDirectory.StartsWith(string.Format("{0}/Linux", pluginsBasePath), StringComparison.InvariantCultureIgnoreCase))
                 {
                     if (assetDirectory.EndsWith("/x86"))
                     {
@@ -114,7 +114,7 @@ namespace TriLibEditor
                     targetCPU = "AnyCPU";
                     buildTargets.Add(BuildTarget.StandaloneOSX);
                     targetOS = "OSX";
-                }
+                }*/
                 else if (assetDirectory.Equals(pluginsBasePath, StringComparison.InvariantCultureIgnoreCase))
                 {
                     targetCPU = "AnyCPU";
@@ -164,14 +164,14 @@ namespace TriLibEditor
 #if UNITY_2018_1_OR_NEWER
                     buildTargets.Add(BuildTarget.Lumin);
 #endif
-            buildTargets.Add(BuildTarget.iOS);
-            buildTargets.Add(BuildTarget.WSAPlayer);
-            buildTargets.Add(BuildTarget.WebGL);
+            //buildTargets.Add(BuildTarget.iOS);
+            //buildTargets.Add(BuildTarget.WSAPlayer);
+            //buildTargets.Add(BuildTarget.WebGL);
             buildTargets.Add(BuildTarget.StandaloneWindows);
             buildTargets.Add(BuildTarget.StandaloneWindows64);
-            buildTargets.Add(BuildTarget.StandaloneLinux);
-            buildTargets.Add(BuildTarget.StandaloneLinux64);
-            buildTargets.Add(BuildTarget.StandaloneOSX);
+            //buildTargets.Add(BuildTarget.StandaloneLinux);
+            //buildTargets.Add(BuildTarget.StandaloneLinux64);
+            //buildTargets.Add(BuildTarget.StandaloneOSX);
         }
 
         private static void SetTargetCPU(PluginImporter pluginImporter, List<BuildTarget> buildTargets, string editorCPU, string targetCPU, string targetOS, bool addToEditor)
